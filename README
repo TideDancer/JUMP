@@ -1,5 +1,0 @@
-main_linterval: set LENGTH as interval, making sure close pair has no overlapping
-main_v2: constraint on overlaping
-
-./shiftonly [datafile.txt] [N] [l]
-./main_linterval [datafile.txt] [N] [l]
