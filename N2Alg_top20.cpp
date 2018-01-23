@@ -70,7 +70,7 @@ int main(  int argc , char *argv[] )
     }
 
     // start processing rest
-		for(long long k=1; k<TIMESERIES; k++){
+		for(long long k=LENGTH; k<TIMESERIES; k++){
         i = 1; // start of first block
         tmp = sum_table[i+k-1] - (data[i-1]-data[i+k-1])*(data[i-1]-data[i+k-1]);
 

@@ -57,7 +57,7 @@ int main(  int argc , char *argv[] )
     }
 
     // start processing rest
-		for(long long k=1; k<TIMESERIES; k++){
+		for(long long k=LENGTH; k<TIMESERIES; k++){
         i = 1; // start of first block
         tmp = sum_table[i+k-1] - (data[i-1]-data[i+k-1])*(data[i-1]-data[i+k-1]);
 
@@ -75,15 +75,15 @@ int main(  int argc , char *argv[] )
     cout<<"cnt is "<<cnt<<", cnt1 is "<<cnt1<<endl;
     printf("Execution Time was : %lf seconds\n",(t2-t1)/CLOCKS_PER_SEC);
 
-    // brute force to check correctness
-    bsf = INF;
-    for(i=0;i<TIMESERIES;i++)
-      for(j=i+1;j<TIMESERIES;j++){
-        tmp = 0.0;
-        for(int k=0;k<LENGTH;k++)
-          tmp += (data[i+k]-data[j+k])*(data[i+k]-data[j+k]);
-        if(tmp <= bsf){
-          bsf = tmp; loc1 = i; loc2 = j;
-      }}
-    cout<<bsf<<endl<<loc1<<endl<<loc2<<endl;
+    // // brute force to check correctness
+    // bsf = INF;
+    // for(i=0;i<TIMESERIES;i++)
+    //   for(j=i+1;j<TIMESERIES;j++){
+    //     tmp = 0.0;
+    //     for(int k=0;k<LENGTH;k++)
+    //       tmp += (data[i+k]-data[j+k])*(data[i+k]-data[j+k]);
+    //     if(tmp <= bsf){
+    //       bsf = tmp; loc1 = i; loc2 = j;
+    //   }}
+    // cout<<bsf<<endl<<loc1<<endl<<loc2<<endl;
 }

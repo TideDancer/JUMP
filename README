@@ -2,6 +2,7 @@
 This is the code repo for the paper:
 JUMP: A Fast Deterministic Algorithm to Find the Closest Pair of Subsequences
 ( accepted in SIAM International Conference on Data Mining 2018 (SDM18) )
+This algorithm tries to find a pair of non-overlapping subsequences in a numerical string, such that this pair has shortest Euclidean distance between the two subsequences, among all such pairs.
 
 ----------------------------------------
 JUMP.cpp: the code for proposed algorithm
