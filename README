@@ -9,6 +9,13 @@ N2Alg.cpp: the code for N2Alg used in the paper
 N2Alg_top20.cpp: the code finding top20 using N2Alg algorithm
 household_power_consumption_globalactive.txt: the sample datafile
 
+To compile:
+g++ -o JUMP JUMP.cpp -lm -O3
+g++ -o N2Alg N2Alg.cpp -lm -O3
+
 To use, pass datafile, total length N, and l-mer length l, as three arguments and call the following:
 ./JUMP [datafile.txt] [N] [l]
 ./N2Alg [datafile.txt] [N] [l]
+
+For example:
+./JUMP household_power_consumption_globalactive.txt 1000000 1024
